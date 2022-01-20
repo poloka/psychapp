@@ -1,0 +1,10 @@
+default: &default
+ enabled: true
+ output: <%= ENV['TIMBER_OUTPUT'] || 'STDOUT' %>
+ format: <%= ENV['TIMBER_FORMAT'] || 'JSON' %>
+
+development:
+ <<: *default
+
+staging:
+ <<: *default
